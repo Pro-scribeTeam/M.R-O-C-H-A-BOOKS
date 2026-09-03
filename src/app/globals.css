@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f4f2;
+  --foreground: #0a0908;
+  --muted: #6b6b6b;
+  --card-bg: #ffffff;
+
+  --accent: #b91c1c;      /* blood red */
+  --accent-2: #d97706;    /* ember amber */
+
+  --card-shadow:
+    0px 0.7px 0.7px -0.67px rgba(0, 0, 0, 0.1),
+    0px 1.8px 1.8px -1.33px rgba(0, 0, 0, 0.1),
+    0px 3.6px 3.6px -2px rgba(0, 0, 0, 0.09),
+    0px 6.9px 6.9px -2.67px rgba(0, 0, 0, 0.08),
+    0px 13.6px 13.6px -3.33px rgba(0, 0, 0, 0.06),
+    0px 30px 30px -4px rgba(0, 0, 0, 0.03),
+    inset 0px 3px 1px 0px rgba(255, 255, 255, 1);
+
+  --card-shadow-dark:
+    0px 0.7px 0.7px -0.67px rgba(0, 0, 0, 0.4),
+    0px 1.8px 1.8px -1.33px rgba(0, 0, 0, 0.35),
+    0px 3.6px 3.6px -2px rgba(0, 0, 0, 0.3),
+    0px 6.9px 6.9px -2.67px rgba(0, 0, 0, 0.25),
+    0px 13.6px 13.6px -3.33px rgba(0, 0, 0, 0.2),
+    0px 30px 30px -4px rgba(0, 0, 0, 0.15),
+    inset 0px 1px 1px 0px rgba(255, 255, 255, 0.06);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.card-surface {
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.card-surface-dark {
+  background: #131110;
+  border-radius: 20px;
+  box-shadow: var(--card-shadow-dark);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.scroll-animation {
+  height: 400vh;
+}
+
+@media (max-width: 1024px) {
+  .scroll-animation {
+    height: 350vh !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-animation {
+    height: 300vh !important;
+  }
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
