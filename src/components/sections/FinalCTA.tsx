@@ -30,11 +30,11 @@ export default function FinalCTA() {
           </p>
         </AnimatedItem>
         <AnimatedItem className="mt-10 flex items-center justify-center gap-4">
-          <Button href="#" variant="primary" showArrow>
+          <Button href="/order" variant="primary" showArrow>
             Buy the Book
           </Button>
-          <Button href="#" variant="secondary">
-            Read a Sample
+          <Button href="/order#audio" variant="secondary">
+            Listen to a Sample
           </Button>
         </AnimatedItem>
       </AnimatedSection>
